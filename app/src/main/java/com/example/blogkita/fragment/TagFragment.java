@@ -1,11 +1,9 @@
-package com.example.blogkita;
+package com.example.blogkita.fragment;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ListView;
-import android.widget.SimpleAdapter;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -15,11 +13,13 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.android.volley.RequestQueue;
 import com.android.volley.toolbox.JsonArrayRequest;
+import com.example.blogkita.ListKategori;
+import com.example.blogkita.activity.MainActivity;
+import com.example.blogkita.ModelKategori;
+import com.example.blogkita.R;
 
 import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.List;
-import java.util.Objects;
 
 
 public class TagFragment extends Fragment {

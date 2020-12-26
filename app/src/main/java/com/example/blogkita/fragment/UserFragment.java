@@ -1,4 +1,4 @@
-package com.example.blogkita;
+package com.example.blogkita.fragment;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -9,13 +9,15 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
+import com.example.blogkita.R;
 
-public class WriteFragment extends Fragment {
+
+public class UserFragment extends Fragment {
 
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        return inflater.inflate(R.layout.fragment_write, container, false);
+        return inflater.inflate(R.layout.fragment_user, container, false);
     }
 }
 

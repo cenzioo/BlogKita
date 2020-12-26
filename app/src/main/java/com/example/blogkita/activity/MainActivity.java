@@ -1,4 +1,4 @@
-package com.example.blogkita;
+package com.example.blogkita.activity;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -14,6 +14,13 @@ import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.JsonArrayRequest;
 import com.android.volley.toolbox.Volley;
+import com.example.blogkita.ModelKategori;
+import com.example.blogkita.R;
+import com.example.blogkita.fragment.HomeFragment;
+import com.example.blogkita.fragment.SearchFragment;
+import com.example.blogkita.fragment.TagFragment;
+import com.example.blogkita.fragment.UserFragment;
+import com.example.blogkita.fragment.WriteFragment;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 import org.json.JSONArray;
