@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/nav_home"
+        android:icon="@drawable/ic_home"
+        android:title="Home" />
+
+    <item
+        android:id="@+id/nav_search"
+        android:icon="@drawable/ic_search"
+        android:title="Cari" />
+
+    <item
+        android:id="@+id/nav_write"
+        android:icon="@drawable/ic_write"
+        android:title="Tulis" />
+
+    <item
+        android:id="@+id/nav_tag"
+        android:icon="@drawable/ic_tag"
+        android:title="Kategori" />
+
+    <item
+        android:id="@+id/nav_user"
+        android:icon="@drawable/ic_user"
+        android:title="Akun" />
+
+</menu>
