@@ -24,23 +24,17 @@ import java.util.Objects;
 
 public class TagFragment extends Fragment {
 
-    List<ModelKategori>
-        kategoriUtama;
+    List<ModelKategori> kategoriUtama;
 
-    RecyclerView
-        recyclerViewKategori;
+    RecyclerView recyclerViewKategori;
 
-    RecyclerView.Adapter
-        adapterKategori;
+    RecyclerView.Adapter adapterKategori;
 
-    RecyclerView.LayoutManager
-        layoutManagerKategori;
+    RecyclerView.LayoutManager layoutManagerKategori;
 
-    RequestQueue
-        requestQueueKategori;
+    RequestQueue requestQueueKategori;
 
-    JsonArrayRequest
-        jsonArrayRequestKategori;
+    JsonArrayRequest jsonArrayRequestKategori;
 
     @Nullable
     @Override

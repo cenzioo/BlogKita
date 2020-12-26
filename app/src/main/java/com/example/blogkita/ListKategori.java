@@ -13,11 +13,9 @@ import java.util.List;
 
 public class ListKategori extends RecyclerView.Adapter<ListKategori.ListViewHolder> {
 
-    Context
-            context;
+    Context context;
 
-    List<ModelKategori>
-            kategori;
+    List<ModelKategori> kategori;
 
     public ListKategori(List<ModelKategori> kategori, Context context) {
         this.context = context;
@@ -26,8 +24,7 @@ public class ListKategori extends RecyclerView.Adapter<ListKategori.ListViewHold
 
     public static class ListViewHolder extends RecyclerView.ViewHolder {
 
-        TextView
-                textKategori;
+        TextView textKategori;
 
 
         public ListViewHolder(@NonNull View itemView) {
