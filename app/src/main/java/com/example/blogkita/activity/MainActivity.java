@@ -38,8 +38,7 @@ public class MainActivity extends AppCompatActivity {
 
     public static final String
         IP_ADDRESS = "http://blog-kita.000webhostapp.com/AndroidDatabase",
-        DATA_KATEGORI = IP_ADDRESS + "/GetKategori.php",
-        DATA_LOGIN = IP_ADDRESS + "/Login.php";
+        DATA_KATEGORI = "http://blog-kita.000webhostapp.com/AndroidDatabase/GetKategori.php";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
