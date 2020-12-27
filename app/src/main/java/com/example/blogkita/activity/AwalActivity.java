@@ -15,27 +15,29 @@ public class AwalActivity extends AppCompatActivity implements View.OnClickListe
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        Button pengunjung = findViewById(R.id.btn_pengunjung)
-        Button register = findViewById(R.id.btn_daftar);
-        Button login = findViewById(R.id.btn_login);
-        pengunjung.setOnClickListener(this);
-        register.setOnClickListener(this);
-        login.setOnClickListener(this);
+
+        Button pengunjung = (Button)findViewById(R.id.btn_pengunjung);
+        Button register = (Button)findViewById(R.id.btn_daftar);
+        Button login = (Button)findViewById(R.id.btn_login);
+
+        pengunjung.setOnClickListener(AwalActivity.this);
+        register.setOnClickListener(AwalActivity.this);
+        login.setOnClickListener(AwalActivity.this);
     }
 
     @Override
     public void onClick(View v) {
         switch (v.getId()){
             case R.id.btn_pengunjung:
-                Intent moveIntent = new Intent(this, MainActivity.class);
+                Intent moveIntent = new Intent(AwalActivity.this, MainActivity.class);
                 startActivity(moveIntent);
                 break;
             case R.id.btn_masuk:
-                moveIntent = new Intent(this, LoginActivity.class);
+                moveIntent = new Intent(AwalActivity.this, LoginActivity.class);
                 startActivity(moveIntent);
                 break;
             case R.id.btn_daftar:
-                moveIntent = new Intent(this, RegisterActivity.class);
+                moveIntent = new Intent(AwalActivity.this, RegisterActivity.class);
                 startActivity(moveIntent);
                 break;
         }
