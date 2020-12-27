@@ -1,4 +1,5 @@
 <resources>
     <string name="app_name">blogkita</string>
     <string name="hello_world" />
+    <string name="home">HOME</string>
 </resources>
