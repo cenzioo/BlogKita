@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.AwalActivity">
+
+
+    <ImageView
+        android:layout_width="180dp"
+        android:layout_height="150dp"
+        android:layout_marginTop="100dp"
+        android:layout_marginLeft="116dp"
+        android:src="@drawable/logo_blogkita"/>
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Halo"
+        android:scaleType="center"
+        android:textSize="25dp"
+        android:layout_marginTop="310dp"
+        android:layout_marginLeft="60dp"
+        />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Selamat Datang Kembali"
+        android:scaleType="center"
+        android:textSize="18dp"
+        android:layout_marginTop="340dp"
+        android:layout_marginLeft="60dp"
+        />
+
+    <Button
+        android:background="@drawable/custom_button"
+        android:textColor="@android:color/white"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:id="@+id/btn_pengunjung"
+        android:text="Pengunjung"
+        android:layout_marginTop="380dp"
+        android:layout_marginLeft="50dp"
+        android:layout_marginRight="50dp"
+        android:textAllCaps="false"
+        />
+
+    <Button
+        android:id="@+id/btn_daftar"
+        android:background="@drawable/custom_button"
+        android:layout_width="120dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="425dp"
+        android:layout_marginLeft="50dp"
+        android:layout_marginRight="200dp"
+        android:text="Daftar"
+        android:textAllCaps="false"
+        />
+
+    <Button
+        android:id="@+id/btn_masuk"
+        android:layout_width="120dp"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/btn_pengunjung"
+        android:layout_alignRight="@+id/btn_pengunjung"
+        android:layout_marginLeft="210dp"
+        android:layout_marginTop="425dp"
+        android:background="@drawable/custom_button"
+        android:text="Masuk"
+        android:textAllCaps="false" />
+
+
+</RelativeLayout>

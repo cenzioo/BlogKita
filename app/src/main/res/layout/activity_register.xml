@@ -76,18 +76,6 @@
             android:layout_marginLeft="40dp"
             />
 
-        <Button
-            android:id="@+id/btn_masuk"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Daftar"
-            android:textAllCaps="false"
-            android:layout_marginTop="800dp"
-            android:layout_marginLeft="50dp"
-            android:layout_marginRight="50dp"
-            />
-
-
         <EditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -143,6 +131,18 @@
             android:layout_marginTop="730dp"
             android:layout_marginRight="50dp"
             android:layout_marginLeft="38dp"
+            />
+
+        <Button
+            android:id="@+id/btn_masuk"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/custom_button"
+            android:text="Daftar"
+            android:textAllCaps="false"
+            android:layout_marginTop="800dp"
+            android:layout_marginLeft="50dp"
+            android:layout_marginRight="50dp"
             />
 
     </RelativeLayout>

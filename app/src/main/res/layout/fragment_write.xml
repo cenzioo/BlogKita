@@ -7,11 +7,35 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="WRITE"
-        android:textSize="40dp"
-        android:layout_centerInParent="true">
+        android:id="@+id/tulisPostingan"
+        android:text="Tulis Postingan"
+        android:textSize="17dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="17dp"
+        android:textStyle="bold"/>
 
-    </TextView>
+    <View
+        android:layout_width="720dp"
+        android:layout_height="1dp"
+        android:id="@+id/garisTulisPostingan"
+        android:background="@drawable/line_3"
+        android:layout_below="@id/tulisPostingan"
+        android:layout_marginTop="10dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/garisTulisPostingan"
+        android:id="@+id/tulisanKategoriPostingan"
+        android:layout_marginTop="17dp"
+        android:layout_marginLeft="17dp"
+        android:text="Kategori"/>
+
+    <Spinner
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tulisanKategoriPostingan"
+        android:layout_marginTop="14dp" />
 
 
 </RelativeLayout>

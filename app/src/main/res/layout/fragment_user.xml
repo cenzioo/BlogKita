@@ -8,28 +8,7 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/akun_saya"
-        android:layout_marginTop="10dp"
-        android:text="Akun Saya"
-        android:layout_centerHorizontal="true"
-        android:gravity="center_horizontal"
-        android:textAlignment="center"
-        android:textSize="17dp"
-        android:textStyle="bold"/>
-
-    <View
-        android:layout_width="match_parent"
-        android:layout_height="1dp"
-        android:id="@+id/garis1"
-        android:layout_below="@id/akun_saya"
-        android:background="@drawable/line_3"
-        android:layout_marginTop="10dp"/>
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
         android:id="@+id/penjelasan_akun"
-        android:layout_below="@id/garis1"
         android:layout_marginTop="30dp"
         android:text="Daftar dan masuk untuk menggunakan fitur - fitur pada aplikasi Blog Kita"
         android:textSize="15dp"
@@ -41,7 +20,7 @@
         android:layout_height="wrap_content"
         android:id="@+id/btnAkunLogin"
         android:layout_below="@id/penjelasan_akun"
-        android:background="@color/dodgerblue"
+        android:background="@drawable/custom_button"
         android:layout_marginLeft="50dp"
         android:layout_marginTop="50dp"
         android:text="Masuk"/>
@@ -51,7 +30,7 @@
         android:layout_height="wrap_content"
         android:id="@+id/btnAkunRegister"
         android:layout_below="@id/penjelasan_akun"
-        android:background="@color/white"
+        android:background="@drawable/custom_button"
         android:layout_marginRight="50dp"
         android:layout_marginTop="50dp"
         android:layout_alignParentRight="true"

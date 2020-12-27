@@ -16,7 +16,8 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Blogkita"
         android:usesCleartextTraffic="true">
-        <activity android:name=".activity.RegisterActivity"/>
+        <activity android:name=".activity.AwalActivity"></activity>
+        <activity android:name=".activity.RegisterActivity" />
         <activity android:name=".activity.LoginActivity" />
         <activity android:name=".activity.MainActivity">
             <intent-filter>
