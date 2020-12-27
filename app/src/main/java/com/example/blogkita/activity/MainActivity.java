@@ -51,6 +51,7 @@ public class MainActivity extends AppCompatActivity {
                     new HomeFragment()).commit();
         }
     }
+
     private BottomNavigationView.OnNavigationItemSelectedListener navListener =
             new BottomNavigationView.OnNavigationItemSelectedListener() {
                 @Override
@@ -78,6 +79,7 @@ public class MainActivity extends AppCompatActivity {
                     return true;
                 }
             };
+
     public void getMysqlKategori(final List<ModelKategori> Kategori, final RecyclerView.Adapter adapterkategori){
         jsonArrayRequest = new JsonArrayRequest(DATA_KATEGORI,
                 new Response.Listener<JSONArray>() {
@@ -118,4 +120,5 @@ public class MainActivity extends AppCompatActivity {
             }
         }
     }
+
 }
