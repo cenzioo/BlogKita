@@ -14,7 +14,6 @@ import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
 import com.example.blogkita.R;
-import com.example.blogkita.activity.LoginActivity;
 import com.example.blogkita.activity.MainActivity;
 import com.example.blogkita.activity.RegisterActivity;
 
@@ -38,7 +37,7 @@ public class UserFragment extends Fragment implements View.OnClickListener {
     public void onClick(View v) {
         switch (v.getId()){
             case R.id.btnAkunLogin:
-                Intent moveIntent = new Intent(getActivity(), LoginActivity.class);
+                Intent moveIntent = new Intent(getActivity(), RegisterActivity.class);
                 startActivity(moveIntent);
                 break;
             case R.id.btnAkunRegister:
