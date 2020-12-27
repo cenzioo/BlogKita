@@ -16,6 +16,7 @@ import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.StringRequest;
 import com.example.blogkita.R;
+import com.example.blogkita.SingletonVolley;
 
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -55,13 +56,13 @@ public class LoginActivity extends AppCompatActivity {
 
         //validating inputs
         if (TextUtils.isEmpty(username)) {
-            editTextEmail.setError("Please enter your email");
+            editTextEmail.setError("Tolong masukkan email");
             editTextEmail.requestFocus();
             return;
         }
 
         if (TextUtils.isEmpty(password)) {
-            editTextPassword.setError("Please enter your password");
+            editTextPassword.setError("Tolong masukkan password");
             editTextPassword.requestFocus();
             return;
         }
@@ -99,10 +100,11 @@ public class LoginActivity extends AppCompatActivity {
             @Override
             protected Map<String, String> getParams() throws AuthFailureError {
                 Map<String, String> params = new HashMap<>();
-                params.put("username", username);
+                params.put("email", username);
                 params.put("password", password);
                 return params;
             }
         };
+        SingletonVolley.getInstance(this).addToRequestQueue(stringRequest);
     }
 }
