@@ -2,16 +2,60 @@
 <RelativeLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:onClick="onClick">
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="USER"
-        android:textSize="40dp"
-        android:layout_centerInParent="true">
+        android:id="@+id/akun_saya"
+        android:layout_marginTop="10dp"
+        android:text="Akun Saya"
+        android:layout_centerHorizontal="true"
+        android:gravity="center_horizontal"
+        android:textAlignment="center"
+        android:textSize="17dp"
+        android:textStyle="bold"/>
 
-    </TextView>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:id="@+id/garis1"
+        android:layout_below="@id/akun_saya"
+        android:background="@drawable/line_3"
+        android:layout_marginTop="10dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/penjelasan_akun"
+        android:layout_below="@id/garis1"
+        android:layout_marginTop="30dp"
+        android:text="Daftar dan masuk untuk menggunakan fitur - fitur pada aplikasi Blog Kita"
+        android:textSize="15dp"
+        android:gravity="center_horizontal"
+        android:textAlignment="center"/>
+
+    <Button
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/btnAkunLogin"
+        android:layout_below="@id/penjelasan_akun"
+        android:background="@color/dodgerblue"
+        android:layout_marginLeft="50dp"
+        android:layout_marginTop="50dp"
+        android:text="Masuk"/>
+
+    <Button
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/btnAkunRegister"
+        android:layout_below="@id/penjelasan_akun"
+        android:background="@color/white"
+        android:layout_marginRight="50dp"
+        android:layout_marginTop="50dp"
+        android:layout_alignParentRight="true"
+        android:text="Daftar"/>
 
 
 </RelativeLayout>

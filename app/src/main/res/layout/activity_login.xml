@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.LoginActivity">
+
+    <ImageView
+        android:layout_width="180dp"
+        android:layout_height="150dp"
+        android:layout_marginTop="100dp"
+        android:layout_marginLeft="116dp"
+        android:src="@drawable/logo_blogkita"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Email"
+        android:textSize="18dp"
+        android:textColor="@color/dodgerblue"
+        android:layout_marginTop="300dp"
+        android:layout_marginLeft="60dp"
+        />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Password"
+        android:textSize="18dp"
+        android:textColor="@color/dodgerblue"
+        android:layout_marginTop="410dp"
+        android:layout_marginLeft="60dp"
+        />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/emailLogin"
+        android:hint="Contoh@email.com"
+        android:inputType="textEmailAddress"
+        android:layout_marginTop="335dp"
+        android:layout_marginRight="55dp"
+        android:layout_marginLeft="55dp"
+        />
+
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/passwordLogin"
+        android:hint="Password"
+        android:inputType="textPassword"
+        android:layout_marginTop="445dp"
+        android:layout_marginRight="55dp"
+        android:layout_marginLeft="55dp"
+        />
+
+    <Button
+        android:id="@+id/btn_login"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Login"
+        android:textAllCaps="false"
+        android:layout_marginTop="530dp"
+        android:layout_marginLeft="50dp"
+        android:layout_marginRight="50dp"
+        />
+
+
+</RelativeLayout>
