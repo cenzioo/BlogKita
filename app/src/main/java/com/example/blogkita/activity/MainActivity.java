@@ -30,9 +30,11 @@ import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
 
-    RequestQueue requestQueue;
+    RequestQueue
+        requestQueue;
 
-    JsonArrayRequest jsonArrayRequest;
+    JsonArrayRequest
+        jsonArrayRequest;
 
     public static final String
         IP_ADDRESS = "http://blog-kita.000webhostapp.com/AndroidDatabase",
@@ -45,14 +47,12 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         BottomNavigationView bottomNav = findViewById(R.id.bottom_navigation);
         bottomNav.setOnNavigationItemSelectedListener(navListener);
-
         //I added this if statement to keep the selected fragment when rotating the device
         if (savedInstanceState == null) {
             getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
                     new HomeFragment()).commit();
         }
     }
-
     private BottomNavigationView.OnNavigationItemSelectedListener navListener =
             new BottomNavigationView.OnNavigationItemSelectedListener() {
                 @Override
@@ -80,7 +80,6 @@ public class MainActivity extends AppCompatActivity {
                     return true;
                 }
             };
-
     public void getMysqlKategori(final List<ModelKategori> Kategori, final RecyclerView.Adapter adapterkategori){
         jsonArrayRequest = new JsonArrayRequest(DATA_KATEGORI,
                 new Response.Listener<JSONArray>() {
@@ -121,5 +120,4 @@ public class MainActivity extends AppCompatActivity {
             }
         }
     }
-
 }
