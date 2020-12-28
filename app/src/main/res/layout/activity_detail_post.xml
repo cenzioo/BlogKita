@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:context=".activity.DetailPostActivity">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="169dp"
+            android:layout_height="182dp"
+            android:layout_centerHorizontal="true"
+            android:src="@drawable/ic_blogkita" />
+
+        <TextView
+            android:id="@+id/textView4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/imageView"
+            android:layout_marginTop="30dp"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            android:layout_centerHorizontal="true"
+            android:textStyle="bold"
+            android:textSize="19dp"
+            android:textAlignment="center"
+            android:text="Polri Beberkan Rekonstuksi Kebakaran di Kejagung"
+            android:gravity="center_horizontal" />
+
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="\tLiputan6.com, Jakarta Direktur Tindak Pidana Umum Bareskrim Polri Brigjen Ferdy Sambo membeberkan rekonstruksi yang dilakukan tim gabungan penyidik Polri dalam mengungkap kasus kebakaran Kejaksaan Agung (Kejagung).\n\n\tPolri menyebut puntung rokok yang menjadi awal penyebab munculnya api.Sambo mengatakan, saat penyelidikan, tim gabungan memanggil dan memeriksa semua pihak yang sebelum kejadian berada di area Kejagung. Pihak yang turut dimintai keterangan adalah pegawai Kejagung, pekerja bangunan, kemanan dalam, cleaning service hingga office boy."
+            android:textSize="15dp"
+            android:layout_below="@id/textView4"
+            android:justificationMode="inter_word"
+            android:layout_marginTop="30dp"
+            android:layout_marginRight="30dp"
+            android:layout_marginLeft="30dp"/>
+
+    </RelativeLayout>
+
+
+</ScrollView>
+
