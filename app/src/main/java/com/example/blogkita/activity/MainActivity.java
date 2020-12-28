@@ -14,12 +14,15 @@ import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.JsonArrayRequest;
 import com.android.volley.toolbox.Volley;
+import com.example.blogkita.ListKategoriPilihan;
 import com.example.blogkita.ModelKategori;
+import com.example.blogkita.ModelKategoriPilihan;
 import com.example.blogkita.ModelPostingan;
 import com.example.blogkita.R;
 import com.example.blogkita.fragment.HomeFragment;
 import com.example.blogkita.fragment.SearchFragment;
 import com.example.blogkita.fragment.TagFragment;
+import com.example.blogkita.fragment.TagPilihanFragment;
 import com.example.blogkita.fragment.UserFragment;
 import com.example.blogkita.fragment.WriteFragment;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
@@ -41,6 +44,7 @@ public class MainActivity extends AppCompatActivity {
         IP_ADDRESS = "http://blog-kita.000webhostapp.com/AndroidDatabase",
         DATA_KATEGORI = IP_ADDRESS + "/GetKategori.php",
         DATA_POSTINGAN = IP_ADDRESS + "/GetListPost.php",
+        DATA_KATEGORI_PILIHAN = IP_ADDRESS + "/GetKategoriPilihan.php",
         DATA_LOGIN = IP_ADDRESS + "/Login.php";
 
 
@@ -92,7 +96,7 @@ public class MainActivity extends AppCompatActivity {
 
                         adapterkategori.notifyDataSetChanged();
 
-                        Toast.makeText(MainActivity.this, "" + Kategori.size(), Toast.LENGTH_LONG).show();
+//                        Toast.makeText(MainActivity.this, "" + Kategori.size(), Toast.LENGTH_LONG).show();
                     }
                 },
                 new Response.ErrorListener() {
@@ -130,10 +134,8 @@ public class MainActivity extends AppCompatActivity {
                     @Override
                     public void onResponse(JSONArray response) {
                         getListPostingan(response, Postingan);
-
                         adapterpostingan.notifyDataSetChanged();
-
-                        Toast.makeText(MainActivity.this, "" + Postingan.size(), Toast.LENGTH_LONG).show();
+//                        Toast.makeText(MainActivity.this, "" + Postingan.size(), Toast.LENGTH_LONG).show();
                     }
                 },
                 new Response.ErrorListener() {
@@ -142,9 +144,7 @@ public class MainActivity extends AppCompatActivity {
                         Toast.makeText(MainActivity.this, error.toString(), Toast.LENGTH_LONG).show();
                     }
                 });
-
         requestQueue = Volley.newRequestQueue(MainActivity.this);
-
         requestQueue.add(jsonArrayRequest);
     }
 
@@ -152,7 +152,6 @@ public class MainActivity extends AppCompatActivity {
         for (int i = 0; i < jsonArray.length(); i++){
             try {
                 ModelPostingan currentPostingan = new ModelPostingan();
-
                 JSONObject jsonObject = jsonArray.getJSONObject(i);
 
                 currentPostingan.setPostinganNama(jsonObject.getString("judul"));
@@ -161,6 +160,47 @@ public class MainActivity extends AppCompatActivity {
 
                 Postingan.add(currentPostingan);
             } catch (Exception e) {
+                e.printStackTrace();
+            }
+        }
+    }
+
+    public void getMysqlListKategoriPilihan(final List<ModelKategoriPilihan> KategoriPilihan, final RecyclerView.Adapter adapterkategoripilihan){
+        jsonArrayRequest = new JsonArrayRequest(DATA_KATEGORI_PILIHAN,
+                new Response.Listener<JSONArray>() {
+                    @Override
+                    public void onResponse(JSONArray response) {
+                        getListKategoriPilihan(response, KategoriPilihan);
+                        adapterkategoripilihan.notifyDataSetChanged();
+   //                     Toast.makeText(MainActivity.this, "" + KategoriPilihan.size(), Toast.LENGTH_LONG).show();
+                    }
+                },
+                new Response.ErrorListener() {
+                    @Override
+                    public void onErrorResponse(VolleyError error) {
+                        Toast.makeText(MainActivity.this, error.toString(), Toast.LENGTH_LONG).show();
+                    }
+                });
+        requestQueue = Volley.newRequestQueue(MainActivity.this);
+        requestQueue.add(jsonArrayRequest);
+    }
+
+    public void getListKategoriPilihan (JSONArray jsonArray, List<ModelKategoriPilihan> KategoriPilihan){
+        for (int i = 0 ; i < jsonArray.length(); i++){
+            try {
+                ModelKategoriPilihan currentKategoriPilihan = new ModelKategoriPilihan();
+                JSONObject jsonObject = jsonArray.getJSONObject(i);
+
+                currentKategoriPilihan.setPostinganNama(jsonObject.getString("judul"));
+                currentKategoriPilihan.setPostinganTanggal(jsonObject.getString("tgl_insert"));
+                currentKategoriPilihan.setPostinganGambar(jsonObject.getString("file_gambar"));
+                currentKategoriPilihan.setKategoriNama(jsonObject.getString("nama"));
+
+                if (jsonObject.getString("nama").equals(TagPilihanFragment.kategoriPilihan)){
+                    KategoriPilihan.add(currentKategoriPilihan);
+                }
+            }
+            catch (Exception e){
                 e.printStackTrace();
             }
         }

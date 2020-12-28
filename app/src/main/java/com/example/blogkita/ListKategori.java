@@ -7,7 +7,10 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
+import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.RecyclerView;
+
+import com.example.blogkita.fragment.TagPilihanFragment;
 
 import java.util.List;
 
@@ -49,20 +52,15 @@ public class ListKategori extends RecyclerView.Adapter<ListKategori.ListViewHold
 
         holder.textKategori.setText(currentItem.getKategoriNama());
 
+        holder.textKategori.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                TagPilihanFragment.kategoriPilihan = currentItem.getKategoriNama();
 
-//        holder.textTitle.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View view) {
-//                NewsPostFragment.newsID = currentItem.getNewsID();
-//                NewsPostFragment.newsTitle = currentItem.getNewsTitle();
-//                NewsPostFragment.newsContent = currentItem.getNewsContent();
-//                NewsPostFragment.newsImage = currentItem.getNewsImage();
-//                NewsPostFragment.newsRelease = currentItem.getNewsRelease();
-//
-//                AppCompatActivity activity = (AppCompatActivity)view.getContext();
-//                activity.getSupportFragmentManager().beginTransaction().replace(R.id.frame_layout, new NewsPostFragment()).addToBackStack("Berita").commit();
-//            }
-//        });
+                AppCompatActivity activity = (AppCompatActivity)view.getContext();
+                activity.getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new TagPilihanFragment()).addToBackStack("Berita").commit();
+            }
+        });
     }
 
     @Override
