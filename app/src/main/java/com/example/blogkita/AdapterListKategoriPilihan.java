@@ -8,8 +8,11 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
+import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.example.blogkita.fragment.PostPilihanFragment;
+import com.example.blogkita.fragment.TagPilihanFragment;
 import com.squareup.picasso.Picasso;
 
 import java.util.List;
@@ -59,11 +62,23 @@ public class AdapterListKategoriPilihan extends RecyclerView.Adapter<AdapterList
     public void onBindViewHolder(@NonNull ListViewHolder holder, int position) {
         final ModelKategoriPilihan currentItem = kategoriPilihan.get(position);
 
+
         if (currentItem.getKategoriNama().equals(namaKategoriPilihan)){
             holder.judulPostingan.setText(currentItem.getPostinganNama());
             holder.tglUpdate.setText(currentItem.getPostinganTanggal());
             Picasso.with(context).load("http://blog-kita.000webhostapp.com/Uploads/" + currentItem.getPostinganGambar()).into(holder.imgPostingan);
         }
+
+        holder.judulPostingan.setText(currentItem.getPostinganNama());
+        holder.judulPostingan.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                PostPilihanFragment.postPilihan = currentItem.getPostinganNama();
+                AppCompatActivity activity = (AppCompatActivity)view.getContext();
+                activity.getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new PostPilihanFragment()).addToBackStack("Berita").commit();
+            }
+        });
+
     }
 
     @Override
