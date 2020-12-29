@@ -13,9 +13,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.android.volley.RequestQueue;
 import com.android.volley.toolbox.JsonArrayRequest;
-import com.example.blogkita.ListKategori;
-import com.example.blogkita.ListPostingan;
-import com.example.blogkita.ModelKategori;
+import com.example.blogkita.AdapterListPostingan;
 import com.example.blogkita.ModelPostingan;
 import com.example.blogkita.R;
 import com.example.blogkita.activity.MainActivity;
@@ -63,7 +61,7 @@ public class HomeFragment extends Fragment {
         recyclerViewListPostingan.setHasFixedSize(true);
         recyclerViewListPostingan.setLayoutManager(layoutManagerListPostingan);
 
-        adapterPostingan = new ListPostingan(listPostingan, getActivity());
+        adapterPostingan = new AdapterListPostingan(listPostingan, getActivity());
         recyclerViewListPostingan.setAdapter(adapterPostingan);
 
         ((MainActivity) requireContext()).getMysqlListPostingan(listPostingan, adapterPostingan);

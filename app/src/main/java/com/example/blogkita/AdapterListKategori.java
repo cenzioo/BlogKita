@@ -14,7 +14,7 @@ import com.example.blogkita.fragment.TagPilihanFragment;
 
 import java.util.List;
 
-public class ListKategori extends RecyclerView.Adapter<ListKategori.ListViewHolder> {
+public class AdapterListKategori extends RecyclerView.Adapter<AdapterListKategori.ListViewHolder> {
 
     Context
             context;
@@ -22,7 +22,7 @@ public class ListKategori extends RecyclerView.Adapter<ListKategori.ListViewHold
     List<ModelKategori>
             kategori;
 
-    public ListKategori(List<ModelKategori> kategori, Context context) {
+    public AdapterListKategori(List<ModelKategori> kategori, Context context) {
         this.context = context;
         this.kategori = kategori;
     }
@@ -41,13 +41,13 @@ public class ListKategori extends RecyclerView.Adapter<ListKategori.ListViewHold
 
     @NonNull
     @Override
-    public ListKategori.ListViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+    public AdapterListKategori.ListViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.list_kategori, parent, false);
 
         return new ListViewHolder(view);
     }
     @Override
-    public void onBindViewHolder(@NonNull ListKategori.ListViewHolder holder, int position) {
+    public void onBindViewHolder(@NonNull AdapterListKategori.ListViewHolder holder, int position) {
         final ModelKategori currentItem = kategori.get(position);
 
         holder.textKategori.setText(currentItem.getKategoriNama());

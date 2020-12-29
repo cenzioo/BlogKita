@@ -14,21 +14,17 @@ import com.squareup.picasso.Picasso;
 
 import java.util.List;
 
-public class ListKategoriPilihan extends RecyclerView.Adapter<ListKategoriPilihan.ListViewHolder> {
+public class AdapterListPostingan extends RecyclerView.Adapter<AdapterListPostingan.ListViewHolder> {
 
     Context
             context;
 
-    List<ModelKategoriPilihan>
-            kategoriPilihan;
+    List<ModelPostingan>
+            postingan;
 
-    String
-            namaKategoriPilihan;
-
-    public ListKategoriPilihan(List<ModelKategoriPilihan> kategoriPilihan, Context context, String namaKategoriPilihan) {
+    public AdapterListPostingan(List<ModelPostingan> postingan, Context context) {
         this.context = context;
-        this.kategoriPilihan = kategoriPilihan;
-        this.namaKategoriPilihan = namaKategoriPilihan;
+        this.postingan = postingan;
     }
 
     public static class ListViewHolder extends RecyclerView.ViewHolder {
@@ -51,24 +47,22 @@ public class ListKategoriPilihan extends RecyclerView.Adapter<ListKategoriPiliha
     @Override
     public ListViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         LayoutInflater inflater = LayoutInflater.from(context);
-        View view = inflater.inflate(R.layout.list_kategori_pilihan, parent, false);
+        View view = inflater.inflate(R.layout.list_post, parent, false);
         return new ListViewHolder(view);
     }
 
     @Override
     public void onBindViewHolder(@NonNull ListViewHolder holder, int position) {
-        final ModelKategoriPilihan currentItem = kategoriPilihan.get(position);
+        final ModelPostingan currentItem = postingan.get(position);
 
-        if (currentItem.getKategoriNama().equals(namaKategoriPilihan)){
-            holder.judulPostingan.setText(currentItem.getPostinganNama());
-            holder.tglUpdate.setText(currentItem.getPostinganTanggal());
-            Picasso.with(context).load("http://blog-kita.000webhostapp.com/Uploads/" + currentItem.getPostinganGambar()).into(holder.imgPostingan);
-        }
+        holder.judulPostingan.setText(currentItem.getPostinganNama());
+        holder.tglUpdate.setText(currentItem.getPostinganTanggal());
+        Picasso.with(context).load("http://blog-kita.000webhostapp.com/Uploads/" + currentItem.getPostinganGambar()).into(holder.imgPostingan);
     }
 
     @Override
     public int getItemCount() {
-        return kategoriPilihan.size();
+        return postingan.size();
     }
 
 }

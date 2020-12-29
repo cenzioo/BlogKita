@@ -13,7 +13,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.android.volley.RequestQueue;
 import com.android.volley.toolbox.JsonArrayRequest;
-import com.example.blogkita.ListKategori;
+import com.example.blogkita.AdapterListKategori;
 import com.example.blogkita.activity.MainActivity;
 import com.example.blogkita.ModelKategori;
 import com.example.blogkita.R;
@@ -61,7 +61,7 @@ public class TagFragment extends Fragment {
         recyclerViewKategori.setHasFixedSize(true);
         recyclerViewKategori.setLayoutManager(layoutManagerKategori);
 
-        adapterKategori = new ListKategori(kategoriUtama, getActivity());
+        adapterKategori = new AdapterListKategori(kategoriUtama, getActivity());
         recyclerViewKategori.setAdapter(adapterKategori);
 
         ((MainActivity) requireContext()).getMysqlKategori(kategoriUtama, adapterKategori);

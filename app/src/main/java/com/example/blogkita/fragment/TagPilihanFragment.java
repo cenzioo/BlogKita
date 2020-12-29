@@ -13,10 +13,8 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.android.volley.RequestQueue;
 import com.android.volley.toolbox.JsonArrayRequest;
-import com.example.blogkita.ListKategoriPilihan;
-import com.example.blogkita.ListPostingan;
+import com.example.blogkita.AdapterListKategoriPilihan;
 import com.example.blogkita.ModelKategoriPilihan;
-import com.example.blogkita.ModelPostingan;
 import com.example.blogkita.R;
 import com.example.blogkita.activity.MainActivity;
 
@@ -66,7 +64,7 @@ public class TagPilihanFragment extends Fragment {
         recyclerViewKategoriPilihan.setHasFixedSize(true);
         recyclerViewKategoriPilihan.setLayoutManager(layoutManagerKategoriPilihan);
 
-        adapterKategoriPilihan = new ListKategoriPilihan(listKategoriPilihan, getActivity(), kategoriPilihan);
+        adapterKategoriPilihan = new AdapterListKategoriPilihan(listKategoriPilihan, getActivity(), kategoriPilihan);
         recyclerViewKategoriPilihan.setAdapter(adapterKategoriPilihan);
 
         ((MainActivity) requireContext()).getMysqlListKategoriPilihan(listKategoriPilihan, adapterKategoriPilihan);
