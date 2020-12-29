@@ -32,10 +32,48 @@
         android:text="Kategori"/>
 
     <Spinner
+        android:id="@+id/dropdownKategori"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@id/tulisanKategoriPostingan"
-        android:layout_marginTop="14dp" />
+        android:layout_marginTop="17dp"
+        android:layout_marginLeft="17dp"/>
 
+    <EditText
+        android:layout_width="364dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tulisanKategoriPostingan"
+        android:id="@+id/judulPostingan"
+        android:layout_marginLeft="17dp"
+        android:layout_marginTop="53dp"
+        android:hint="Judul Postingan" />
+
+    <Button
+        android:layout_width="364dp"
+        android:layout_height="158dp"
+        android:layout_below="@id/judulPostingan"
+        android:id="@+id/uploadGambar"
+        android:layout_marginLeft="17dp"
+        android:layout_marginTop="17dp"
+        android:background="@drawable/custom_button1"
+        android:text="Unggah Gambar Sampul" />
+
+    <EditText
+        android:id="@+id/isiPostingan"
+        android:layout_width="364dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/uploadGambar"
+        android:layout_marginLeft="17dp"
+        android:layout_marginTop="17dp"
+        android:hint="Isi Postingan" />
+
+    <Button
+        android:layout_width="364dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/isiPostingan"
+        android:layout_marginLeft="17dp"
+        android:layout_marginTop="17dp"
+        android:background="@drawable/custom_button"
+        android:text="Submit"/>
 
 </RelativeLayout>
